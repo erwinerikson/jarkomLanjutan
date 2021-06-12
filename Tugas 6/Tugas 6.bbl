@@ -1,0 +1,44 @@
+\begin{thebibliography}{1}
+
+\bibitem{farnaaz2016random}
+N.~Farnaaz and M.~Jabbar, ``Random forest modeling for network intrusion
+  detection system,'' {\em Procedia Computer Science}, vol.~89, pp.~213--217,
+  2016.
+
+\bibitem{liao}
+Y.~Liao and R.~Vemuri, ``Use of k-nearest neighbor classifier for intrusion
+  detection,'' {\em Computers and Security}, vol.~21, pp.~439--448, 10 2002.
+
+\bibitem{nurhadi2017aplikasi}
+N.~Nurhadi, {\em Aplikasi Intelligence Intrusion Detection System (IIDS) Dengan
+  Menggunakan Metode K-Nearest Neighbor Untuk Mendeteksi Serangan Pada
+  Jaringan}.
+\newblock PhD thesis, Universitas Islam Negeri Sultan Syarif Kasim Riau, 2017.
+
+\bibitem{lubis2020optimization}
+Z.~Lubis, P.~Sihombing, and H.~Mawengkang, ``Optimization of k value at the
+  k-nn algorithm in clustering using the expectation maximization algorithm,''
+  in {\em IOP Conference Series: Materials Science and Engineering}, p.~012133,
+  IOP Publishing, 2020.
+
+\bibitem{hasan}
+M.~A. Hasan, M.~Nasser, B.~Pal, and S.~Ahmad, ``Support vector machine and
+  random forest modeling for intrusion detection system (ids),'' {\em Journal
+  of Intelligent Learning Systems and Applications}, vol.~06, pp.~45--52, 01
+  2014.
+
+\bibitem{inproceedings}
+E.~Xydas, C.~Marmaras, L.~Cipcigan, A.~Sani~Hassan, and N.~Jenkins,
+  ``Forecasting electric vehicle charging demand using support vector
+  machines,'' {\em Proceedings of the Universities Power Engineering
+  Conference}, pp.~1--6, 09 2013.
+
+\bibitem{zhang}
+W.~Zhang, F.~Liu, L.~Longqiang, and J.~Zhang, ``Predicting drug side effects by
+  multi-label learning and ensemble learning,'' {\em BMC Bioinformatics},
+  vol.~16, 11 2015.
+
+\bibitem{mamcose}
+Mamcose, ``Nsl-kdd-network-intrusion-detection,'' 2019.
+
+\end{thebibliography}

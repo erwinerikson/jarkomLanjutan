@@ -1,6 +1,6 @@
 \documentclass[conference]{IEEEtran}
 \IEEEoverridecommandlockouts
-% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
@@ -15,13 +15,10 @@
 \renewcommand{\IEEEkeywordsname}{Keywords}
 \usepackage{caption}
 \usepackage{pgf}
-    
-\begin{document}
 
-\title{Intrusion Detection\\
-%{\footnotesize \textsuperscript{*}Note: Sub-titles are not captured in Xplore and should not be used}
-%\thanks{Identify applicable funding agency here. If none, delete this.}
-}
+\begin{document}
+    
+\title{Intrusion Detection}
 
 \author{\IEEEauthorblockN{Erwin Erikson}
 \IEEEauthorblockA{\textit{Faculty of Information Technology} \\
@@ -45,7 +42,7 @@ Batam, Indonesia \\
 \maketitle
 
 \begin{abstract}
-Meningkatnya perkembangan internet tidak terlepas dari serangan seperti malware infection. Intrusion Detection System (IDS) adalah masalah nonlinier, rumit dan berhubungan dengan data lalu lintas jaringan. IDS mencoba untuk mengidentifikasi dan memberi tahu aktivitas pengguna sebagai anomali normal. Untuk mendeteksi berbagai serangan jaringan dapat dilatih dengan melakukan percobaan menggunakan dataset NSL-KDD\cite{ndd} dengan beberapa algoritma yaitu Random Forest, K-Neighbors\cite{liao}, SVM dan Ensemble Learning.
+Meningkatnya perkembangan internet tidak terlepas dari serangan seperti malware infection. Intrusion Detection System (IDS) adalah masalah nonlinier, rumit dan berhubungan dengan data lalu lintas jaringan. IDS mencoba untuk mengidentifikasi dan memberi tahu aktivitas pengguna sebagai anomali normal. Untuk mendeteksi berbagai serangan jaringan dapat dilatih dengan melakukan percobaan menggunakan dataset NSL-KDD dengan beberapa algoritma yaitu Random Forest, K-Neighbors, SVM dan Ensemble Learning.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -53,7 +50,7 @@ intrusion detection, Random Forest, K-Neighbors, SVM, Ensemble Learning, NSL-KDD
 \end{IEEEkeywords}
 
 \section{Pendahuluan}
-Meningkatnya pengguna internet dari tahun ke tahun tidak terlepas dari serangan yang timbul dari teknologi jaringan seperti serangan \emph{malware infection}. Oleh karena itu, diperlukan keamanan dalam sistem komputer untuk mencegah dari serangan.
+Pengguna internet yang terus meningkat dari tahun ke tahun tidak terlepas dari serangan yang timbul dari teknologi jaringan seperti serangan \emph{malware infection}. Oleh karena itu, diperlukan keamanan dalam sistem komputer untuk mencegah dari serangan.
 
 IDS (\emph{Intrusion Detection System}) merupakan sebuah aplikasi yang mampu mencatat kegiatan dalam suatu jaringan dan menganalisa paket-paket yang dikirim melalui lalu lintas jaringan secara \emph{realtime}. Tujuan dari sistem ini yaitu mengawasi jika terjadi penetrasi ke dalam sistem, mengawasi \emph{traffic} yang terjadi pada jaringan, mendeteksi \emph{anomaly} terjadinya penyimpangan dari sistem yang normal atau tingkah laku user.
 
@@ -73,37 +70,50 @@ Keuntungan \emph{Random Forest} adalah sebagai berikut\cite{farnaaz2016random}:
 \item Dalam akurasi RF dan kepentingan variabel secara otomatis dihasilkan.
 \end{enumerate}
 
+Flowchart dari proses pemodelan algoritma \emph{Random Forest} dapat dilihat pada ``Gambar. 1''.\vspace{6pt}
+
+\begin{minipage}{\linewidth}
+\centerline{\includegraphics[width=60mm]{Gambar/Gbr001.jpg}}
+\captionof{figure}{Flowchart Algoritma Random Forest}
+\label{fig1}
+\end{minipage}
 
 \subsection{K-Nearest Neighbors}
 
-\emph{K-nearest neighbors} (knn) adalah algoritma yang berfungsi untuk melakukan klasifikasi suatu data berdasarkan data pembelajaran (\emph{train data sets}), yang diambil dari k tetangga terdekatnya (\emph{nearest neighbors}), dengan k merupakan banyaknya tetangga terdekat. Beberapa formula yang digunakan adalah:
+\emph{K-nearest neighbors} (knn) adalah algoritma yang berfungsi untuk melakukan klasifikasi suatu data berdasarkan data pembelajaran (\emph{train data sets}), yang diambil dari k tetangga terdekatnya (\emph{nearest neighbors}), dengan k merupakan banyaknya tetangga terdekat\cite{liao}. Beberapa formula yang digunakan adalah:
 
 \begin{itemize}
 \item \emph{Euclidean Distance}\\
 Untuk mendefinisikan jarak antara dua titik yaitu titik pada data training (x) dan titik pada data testing (y), maka digunakan rumus \emph{Euclidean}\cite{nurhadi2017aplikasi}, yaitu:
 
-\begin{equation}
-d(x,y)=\sqrt{\sum^{n}_{i=1} (xi-yi)^2}
+\begin{equation*}
+d(x,y)=\sqrt{\sum^{n}_{i=1} (x_i-y_i)^2}
 \label{eq1}
-\end{equation}
+\end{equation*}
 
-dimana:\\
-$d$ = jarak antara 2 titik\\
-$x$ = data uji\\
-$y$ = data latih\\
-$i$ = merepresentasikan nilai atribut\\
-$n$ = merupakan dimensi atribut.\\
+dimana:
+
+$d$ = jarak antara 2 titik
+
+$x$ = data uji
+
+$y$ = data latih
+
+$i$ = merepresentasikan nilai atribut
+
+$n$ = merupakan dimensi atribut.\vspace{10pt}
 
 \item \emph{City Block Distance}\\
 \emph{City Block Distance} umumnya dihitung antara 2 koordinat objek yang berpasangan. Ini adalah penjumlahan dari perbedaan absolut antara 2 koordinat. \emph{City Block Distance} 2-titik a dan b dengan dimensi k dihitung secara matematis menggunakan rumus berikut ini:
 
-\begin{equation}
+\begin{equation*}
 d_{ij}=\sum^{k}_{i=1} | a_i-b_i |
 \label{eq2}
-\end{equation}\\
+\end{equation*}
 
 \item \emph{Manhattan Distance}\\
-\emph{Manhattan Distance} merupakan salah satu pengukuran yang paling banyak digunakan meliputi penggantian perbedaan kuadrat dengan menjumlahkan perbedaan \emph{absolute} dari variabel-variabel. Fungsi ini hanya akan menjumlahkan selisih nilai x dan y dari dua buah titik.\\
+\emph{Manhattan Distance} merupakan salah satu pengukuran yang paling banyak digunakan meliputi penggantian perbedaan kuadrat dengan menjumlahkan perbedaan \emph{absolute} dari variabel-variabel. Fungsi ini hanya akan menjumlahkan selisih nilai x dan y dari dua buah titik.
+\vspace{10pt}
 
 \item \emph{Minkwoski Distance}\\
 \emph{Minkwoski Distance} adalah metrik dalam ruang vektor bernorma yang dapat dianggap sebagai generalisasi dari kedua jarak \emph{Euclidean} dan jarak \emph{Manhattan}. Jarak \emph{Minkowski} antara dua variabel X dan Y didefinisikan sebagai:
@@ -116,6 +126,14 @@ d = (\sum^{n}_{i=1} | X_i-Y_i |^p)^{1/p}
 Kasus di mana $p$ = 1 setara dengan jarak \emph{Manhattan} dan kasus di mana $p$ = 2 setara dengan jarak \emph{Euclidean}.
 
 \end{itemize}
+
+Flowchart dari proses pemodelan algoritma \emph{K-nearest neighbors} dapat dilihat pada ``Gambar. 2''\cite{lubis2020optimization}.\vspace{6pt}
+
+\begin{minipage}{\linewidth}
+\centerline{\includegraphics[width=55mm]{Gambar/Gbr002.jpg}}
+\captionof{figure}{Flowchart Algoritma K-nearest neighbors}
+\label{fig2}
+\end{minipage}
 
 \subsection{SVM}
 
@@ -138,25 +156,40 @@ K(x_i,x_j) = exp\left (- \frac{||x_i-x_j||^2}{2\sigma} \right )
 
 \noindent dimana $\sigma$ adalah lebar fungsi.
 
-Fungsi kernel dan parameternya harus dipilih untuk 
-membangun pengklasifikasi SVM. Melatih SVM menemukan \emph{hyperplane} margin besar, yaitu menetapkan parameter $\alpha$.\\
+Fungsi kernel dan parameternya harus dipilih untuk membangun pengklasifikasi SVM. Melatih SVM menemukan \emph{hyperplane} margin besar, yaitu menetapkan parameter $\alpha$.
+
+Flowchart dari proses pemodelan algoritma SVM dapat dilihat pada ``Gambar. 3''\cite{inproceedings}.\vspace{6pt}
+
+\begin{minipage}{\linewidth}
+\centerline{\includegraphics[width=50mm]{Gambar/Gbr003.jpg}}
+\captionof{figure}{Flowchart Algoritma SVM}
+\label{fig3}
+\end{minipage}
+
+\subsection{Ensemble Learning}
+
+Metode ini adalah menggabungkan beberapa fitur dengan pembelajaran \emph{Ensemble}.
+
+Flowchart dari proses pemodelan algoritma \emph{Ensemble Learning} dapat dilihat pada ``Gambar. 4''\cite{zhang}.\vspace{6pt}
+
+\begin{minipage}{\linewidth}
+\centerline{\includegraphics[width=80mm]{Gambar/Gbr004.png}}
+\captionof{figure}{Flowchart Algoritma Ensemble Learning}
+\label{fig4}
+\end{minipage}
 
 \section{Metodologi}
 
-Metodologi adalah tahapan yang akan dilakukan dalam melakukan penelitian agar dapat memenuhi tujuan sesuai dengan yang diharapkan. Tahapan penelitian yang akan dilakukan dapat dilihat pada ``Gambar.~\ref{fig1}''.\\
+Metodologi adalah tahapan yang akan dilakukan dalam melakukan penelitian agar dapat memenuhi tujuan sesuai dengan yang diharapkan. Tahapan penelitian yang akan dilakukan dapat dilihat pada ``Gambar. 5''.
 
 \begin{minipage}{\linewidth}
 \centerline{\includegraphics[width=35mm]{Gambar/Metodologi_Diagram.png}}
 \captionof{figure}{Tahapan Penelitian}
-\label{fig1}
+\label{fig5}
 \end{minipage}
+\vspace{6pt}
 
 Tahapan pada penelitian ini dapat dijelaskan sebagai berikut:
-
-\noindent \textbf{Perumusan Masalah}
-
-Merupakan tahap awal dari metodologi penelitian. Rumusan
-masalah di dalam penelitian yakni bagaimana mengklasifikasikan data serangan Intrusion Detection System (IDS)
 
 \noindent \textbf{Pengumpulan Data}
 
@@ -181,282 +214,130 @@ Merupakan tahap penentuan kesimpulan terhadap hasil pengujian yang telah dilakuk
 
 \section{Hasil dan Pembahasan}
 
-Untuk melakukan pelatihan/pengujian digunakan dataset NSL-KDD dimana NSL\_KDD\_Train sebagai data latih dan NSL\_KDD\_Test sebagai data uji seperti pada ``Gambar.~\ref{fig2}''.\\
+Untuk melakukan pelatihan/pengujian digunakan dataset NSL-KDD dimana NSL\_KDD\_Train sebagai data latih dan NSL\_KDD\_Test sebagai data uji seperti pada ``Gambar. 6''\cite{mamcose}.\vspace{6pt}
 
 \begin{minipage}{\linewidth}
 \centerline{\includegraphics[width=80mm]{Gambar/Gbr01.jpg}}
 \captionof{figure}{Data Latih dan Data Uji}
-\label{fig2}
-\end{minipage}
-
-Pada tahap data preprocessing menggunakan One-Hot-Encoding untuk mengonversi semua properti kategorikal menjadi properti biner. Untuk mengonversi setiap kategori menjadi angka, properti harus dikonversi terlebih dahulu dengan LabelEncoder seperti pada ``Gambar.~\ref{fig3}'', ``Gambar.~\ref{fig4}'', dan ``Gambar.~\ref{fig5}''.\\
-
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr02.jpg}}
-\captionof{figure}{Menyisipkan fitur kategoris}
-\label{fig3}
-\end{minipage}
-
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr03.jpg}}
-\captionof{figure}{Mengubah fitur kategoris menjadi angka}
-\label{fig4}
-\end{minipage}
-
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr04.jpg}}
-\captionof{figure}{One-Hot-Encoding}
-\label{fig5}
-\end{minipage}\\
-
-Selanjutnya menambahkan kolom yang hilang dalam set pengujian seperti pada ``Gambar.~\ref{fig6}''.\\
-
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr05.jpg}}
-\captionof{figure}{Menambahkan kolom yang hilang}
 \label{fig6}
-\end{minipage}\\
+\end{minipage}
+\vspace{6pt}
 
-Lalu menambahkan kolom numerik baru ke dataframe utama seperti pada ``Gambar.~\ref{fig7}''.\\
-
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr06.jpg}}
-\captionof{figure}{Menambahkan kolom numerik baru}
-\label{fig7}
-\end{minipage}\\
-
-Kemudian membagi dataset untuk setiap kategori serangan yaitu 0 = Normal, 1 = DoS, 2 = Probe, 3 = R2L, 4 = U2R seperti pada ``Gambar.~\ref{fig8}''.\\
+Dari dataset tersebut dibagi untuk setiap kategori serangan
+yaitu 0 = Normal, 1 = DoS, 2 = Probe, 3 = R2L, 4 = U2R.
+Hasil pembagian setiap kategori serangan dari data latih dan data uji dapat dilihat pada ``Gambar. 7''.\vspace{6pt}
 
 \begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr07.jpg}}
-\captionof{figure}{Membagi dataset untuk kategori serangan}
+    \centerline{\includegraphics[width=80mm]{Gambar/Gbr011.jpg}}
+    \captionof{figure}{Jumlah Data Setiap Kategori Serangan}
+    \label{fig7}
+    \end{minipage}
+    \vspace{6pt}
+
+Untuk menghitung precision dan recall dengan cepat dari setiap serangan dilakukan
+tahap \emph{Prediction} dan \emph{Evaluation} (\emph{validation}) dengan \emph{confusion matrix}
+seperti pada ``Gambar. 8''.
+
+\begin{minipage}{\linewidth}
+\centerline{\includegraphics[width=60mm]{Gambar/Gbr005.jpg}}
+\captionof{figure}{Confusion Matrix}
 \label{fig8}
-\end{minipage}\\
+\end{minipage}
+\vspace{6pt}
 
-Tahap selanjutnya melakukan penskalaan fitur dengan memisahkan kerangka data menjadi X dan Y dimana X Properties, variabel hasil Y seperti pada ``Gambar.~\ref{fig9}''.\\
+
+Hasil \emph{Prediction} dan \emph{Evaluation} (\emph{validation})
+metode \emph{Random Forest} semua fitur dapat dilihat
+pada ``Gambar. 9''.
 
 \begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr08.jpg}}
-\captionof{figure}{Penskalaan fitur}
+\centerline{\includegraphics[width=90mm]{Gambar/Gbr006.jpg}}
+\captionof{figure}{Confusion Matrix Random Forest All Fitur}
 \label{fig9}
-\end{minipage}\\
+\end{minipage}
+\vspace{6pt}
 
-Berikutnya tahap pemilihan 13 fitur terbaik (sebagai grup) menggunakan \emph{Recursive Feature Elimination} (RFE) seperti pada ``Gambar.~\ref{fig10}''.\\
+Hasil \emph{Prediction} dan \emph{Evaluation} (\emph{validation})
+metode \emph{Random Forest} 13 fitur dapat dilihat
+pada ``Gambar. 10''.
 
 \begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr09.jpg}}
-\captionof{figure}{Pemilihan fitur}
+\centerline{\includegraphics[width=90mm]{Gambar/Gbr007.jpg}}
+\captionof{figure}{Confusion Matrix Random Forest 13 Fitur}
 \label{fig10}
-\end{minipage}\\
+\end{minipage}
+\vspace{6pt}
 
-Fitur yang dipilih untuk beberapa serangan oleh RFE dapat dilihat pada ``Gambar.~\ref{fig11}''.\\
+Hasil \emph{Prediction} dan \emph{Evaluation} (\emph{validation})
+metode \emph{K-Neighbors} dapat dilihat
+pada ``Gambar. 11''.
 
 \begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr10.jpg}}
-\captionof{figure}{Fitur Serangan oleh RFE}
+\centerline{\includegraphics[width=90mm]{Gambar/Gbr008.jpg}}
+\captionof{figure}{Confusion Matrix K-Neighbors}
 \label{fig11}
-\end{minipage}\\
+\end{minipage}
+\vspace{6pt}
 
-Selanjutnya dilakukan pengujian menggunakan algoritma \emph{Random Forest}. Model pengklasifikasi disimpan dalam variabel clf seperti pada ``Gambar.~\ref{fig12}''.\\
+Hasil \emph{Prediction} dan \emph{Evaluation} (\emph{validation})
+metode SVM dapat dilihat
+pada ``Gambar. 12''.
 
 \begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr11.jpg}}
-\captionof{figure}{Pengujian Algoritma Random Forest}
+\centerline{\includegraphics[width=90mm]{Gambar/Gbr009.jpg}}
+\captionof{figure}{Confusion Matrix SVM}
 \label{fig12}
-\end{minipage}\\
+\end{minipage}
+\vspace{6pt}
 
-Hasil evaluasi kinerja model atau algoritma \emph{Random Forest} untuk semua fitur dengan Cross Validation.\\
-Untuk DoS dapat dilihat pada ``Gambar.~\ref{fig13}''.\\
+Hasil \emph{Prediction} dan \emph{Evaluation} (\emph{validation})
+metode \emph{Ensemble Learning} dapat dilihat
+pada ``Gambar. 13''.
 
 \begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr12.jpg}}
-\captionof{figure}{Cross Validation DoS All Fitur}
+\centerline{\includegraphics[width=90mm]{Gambar/Gbr010.jpg}}
+\captionof{figure}{Confusion Matrix Ensemble Learning}
 \label{fig13}
-\end{minipage}\\
+\end{minipage}
+\vspace{6pt}
 
-\noindent Untuk \emph{Probe} dapat dilihat pada ``Gambar.~\ref{fig14}''.\\
+Dengan \emph{confusion matrix} dilakukan penghitungan \emph{Accuracy}, \emph{Precision}, \emph{Recall},
+dan \emph{F-measure} dari nilai masing-masing dalam matriks dengan menerapkan persamaan berikut:
 
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr13.jpg}}
-\captionof{figure}{Cross Validation Probe All Fitur}
-\label{fig14}
-\end{minipage}\\
+\begin{equation}
+    Accuracy = \frac{TP + TN}{TP + FP + FN + TN}
+    \label{eq6}
+\end{equation}
 
-\noindent Untuk U2R dapat dilihat pada ``Gambar.~\ref{fig15}''.\\
+\begin{equation}
+    Precision = \frac{TP}{TP + FP}
+    \label{eq7}
+\end{equation}
 
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr14.jpg}}
-\captionof{figure}{Cross Validation U2R All Fitur}
-\label{fig15}
-\end{minipage}\\
+\begin{equation}
+    Recall = \frac{TP}{TP + FN}
+    \label{eq8}
+\end{equation}
 
-\noindent Untuk R2L dapat dilihat pada ``Gambar.~\ref{fig16}''.\\
+\begin{equation}
+    F-measure = 2 * \frac{precision * recall}{precision + recall}
+    \label{eq9}
+\end{equation}
 
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr15.jpg}}
-\captionof{figure}{Cross Validation R2L All Fitur}
-\label{fig16}
-\end{minipage}\\
+\noindent dimana:
 
-Hasil evaluasi kinerja model atau algoritma \emph{Random Forest} untuk 13 fitur dengan Cross Validation.\\
-Untuk DoS dapat dilihat pada ``Gambar.~\ref{fig17}''.\\
+\noindent $TP$ = True Positive
 
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr16.jpg}}
-\captionof{figure}{Cross Validation DoS 13 Fitur}
-\label{fig17}
-\end{minipage}\\
+\noindent $TN$ = True Negative
 
-\noindent Untuk \emph{Probe} dapat dilihat pada ``Gambar.~\ref{fig18}''.\\
+\noindent $FP$ = False Positive
 
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr17.jpg}}
-\captionof{figure}{Cross Validation Probe 13 Fitur}
-\label{fig18}
-\end{minipage}\\
-
-\noindent Untuk R2L dapat dilihat pada ``Gambar.~\ref{fig19}''.\\
-
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr18.jpg}}
-\captionof{figure}{Cross Validation R2L 13 Fitur}
-\label{fig19}
-\end{minipage}\\
-
-\noindent Untuk U2R dapat dilihat pada ``Gambar.~\ref{fig20}''.\\
-
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr19.jpg}}
-\captionof{figure}{Cross Validation U2R 13 Fitur}
-\label{fig20}
-\end{minipage}\\
-
-Selanjutnya dilakukan pengujian menggunakan algoritma \emph{K-Neighbors}. Model pengklasifikasi disimpan dalam variabel clf seperti pada ``Gambar.~\ref{fig21}''.\\
-
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr20.jpg}}
-\captionof{figure}{Pengujian Algoritma K-Neighbors}
-\label{fig21}
-\end{minipage}\\
-
-Hasil evaluasi kinerja model atau algoritma \emph{K-Neighbors} dengan Cross Validation.\\
-Untuk DoS dapat dilihat pada ``Gambar.~\ref{fig22}''.\\
-
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr21.jpg}}
-\captionof{figure}{Cross Validation DoS K-Neighbors}
-\label{fig22}
-\end{minipage}\\
-
-\noindent Untuk \emph{Probe} dapat dilihat pada ``Gambar.~\ref{fig23}''.\\
-
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr22.jpg}}
-\captionof{figure}{Cross Validation Probe K-Neighbors}
-\label{fig23}
-\end{minipage}\\
-
-\noindent Untuk R2L dapat dilihat pada ``Gambar.~\ref{fig24}''.\\
-
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr23.jpg}}
-\captionof{figure}{Cross Validation R2L K-Neighbors}
-\label{fig24}
-\end{minipage}\\
-
-\noindent Untuk U2R dapat dilihat pada ``Gambar.~\ref{fig25}''.\\
-
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr24.jpg}}
-\captionof{figure}{Cross Validation U2R K-Neighbors}
-\label{fig25}
-\end{minipage}\\
-
-Selanjutnya dilakukan pengujian menggunakan algoritma SVM. Model pengklasifikasi disimpan dalam variabel clf seperti pada ``Gambar.~\ref{fig26}''.\\
-
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr25.jpg}}
-\captionof{figure}{Pengujian Algoritma SVM}
-\label{fig26}
-\end{minipage}\\
-
-Hasil evaluasi kinerja model atau algoritma SVM dengan \emph{Cross Validation}.\\
-Untuk DoS dapat dilihat pada ``Gambar.~\ref{fig27}''.\\
-
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr26.jpg}}
-\captionof{figure}{Cross Validation DoS SVM}
-\label{fig27}
-\end{minipage}\\
-
-\noindent Untuk \emph{Probe} dapat dilihat pada ``Gambar.~\ref{fig28}''.\\
-
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr27.jpg}}
-\captionof{figure}{Cross Validation Probe SVM}
-\label{fig28}
-\end{minipage}\\
-
-\noindent Untuk R2L dapat dilihat pada ``Gambar.~\ref{fig29}''.\\
-
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr28.jpg}}
-\captionof{figure}{Cross Validation R2L SVM}
-\label{fig29}
-\end{minipage}\\
-
-\noindent Untuk U2R dapat dilihat pada ``Gambar.~\ref{fig30}''.\\
-
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr29.jpg}}
-\captionof{figure}{Cross Validation U2R SVM}
-\label{fig30}
-\end{minipage}\\
-
-Kemudian dilakukan pengujian dengan metode \emph{Ensemble Learning} menggunakan algoritma \emph{Random Forest}, \emph{K-Neighbors}, dan SVM. Model pengklasifikasi disimpan dalam variabel clf seperti pada ``Gambar.~\ref{fig31}''.\\
-
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr30.jpg}}
-\captionof{figure}{Pengujian Algoritma Ensemble Learning}
-\label{fig31}
-\end{minipage}\\
-
-Hasil evaluasi kinerja model atau algoritma \emph{Ensemble Learning} dengan \emph{Cross Validation}.\\
-Untuk DoS dapat dilihat pada ``Gambar.~\ref{fig32}''.\\
-
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr31.jpg}}
-\captionof{figure}{Cross Validation DoS Ensemble Learning}
-\label{fig32}
-\end{minipage}\\
-
-\noindent Untuk \emph{Probe} dapat dilihat pada ``Gambar.~\ref{fig33}''.\\
-
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr32.jpg}}
-\captionof{figure}{Cross Validation Probe Ensemble Learning}
-\label{fig33}
-\end{minipage}\\
-
-\noindent Untuk R2L dapat dilihat pada ``Gambar.~\ref{fig34}''.\\
-
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr33.jpg}}
-\captionof{figure}{Cross Validation R2L Ensemble Learning}
-\label{fig34}
-\end{minipage}\\
-
-\noindent Untuk U2R dapat dilihat pada ``Gambar.~\ref{fig35}''.\\
-
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr34.jpg}}
-\captionof{figure}{Cross Validation U2R Ensemble Learning}
-\label{fig35}
-\end{minipage}\\
+\noindent $FN$ = False Negative
+\vspace{6pt}
 
 Dari hasil evaluasi kinerja dari masing-masing model atau algoritma, dapat dilihat pada tabel-tabel berikut:
 
-\noindent Pengujian menggunakan algoritma \emph{Random Forest} untuk semua fitur dapat dilihat pada ``Tabel.~\ref{tab1}''.\\
+\noindent Pengujian menggunakan algoritma \emph{Random Forest} untuk semua fitur dapat dilihat pada ``Tabel. I''.\vspace{6pt}
 
 \begin{minipage}{\linewidth}
 \captionof{table}{Algoritma Random Forest untuk semua Fitur}
@@ -478,7 +359,7 @@ U2R & 0.98047 & 0.97293 & 0.96844 & 0.97290\\
 \end{center}
 \end{minipage}\\ \\
 
-\noindent Pengujian menggunakan algoritma \emph{Random Forest} untuk 13 fitur dapat dilihat pada ``Tabel.~\ref{tab2}''.\\
+\noindent Pengujian menggunakan algoritma \emph{Random Forest} untuk 13 fitur dapat dilihat pada ``Tabel. II''.\vspace{6pt}
 
 \begin{minipage}{\linewidth}
 \captionof{table}{Algoritma Random Forest untuk 13 Fitur}
@@ -500,7 +381,7 @@ U2R & 0.99693 & 0.96256 & 0.83183 & 0.90644\\
 \end{center}
 \end{minipage}\\ \\
 
-\noindent Pengujian menggunakan algoritma \emph{K-Neighbors} dapat dilihat pada ``Tabel.~\ref{tab3}''.\\
+\noindent Pengujian menggunakan algoritma \emph{K-Neighbors} dapat dilihat pada ``Tabel. III''.\vspace{6pt}
 
 \begin{minipage}{\linewidth}
 \captionof{table}{Algoritma K-Neighbors}
@@ -522,7 +403,7 @@ U2R & 0.99703 & 0.93143 & 0.85073 & 0.87831\\
 \end{center}
 \end{minipage}\\ \\
 
-\noindent Pengujian menggunakan algoritma SVM dapat dilihat pada ``Tabel.~\ref{tab4}''.
+\noindent Pengujian menggunakan algoritma SVM dapat dilihat pada ``Tabel. IV''.
 
 \begin{minipage}{\linewidth}
 \captionof{table}{Algoritma SVM}
@@ -544,7 +425,7 @@ U2R & 0.99632 & 0.91056 & 0.82909 & 0.84869\\
 \end{center}
 \end{minipage}\\ \\
 
-\noindent Pengujian menggunakan algoritma \emph{Ensemble Learning} dapat dilihat pada ``Tabel.~\ref{tab5}''.\\
+\noindent Pengujian menggunakan algoritma \emph{Ensemble Learning} dapat dilihat pada ``Tabel. V''.\vspace{6pt}
 
 \begin{minipage}{\linewidth}
 \captionof{table}{Algoritma Ensemble Learning}
@@ -570,12 +451,13 @@ U2R & 0.99744 & 0.94270 & 0.88758 & 0.91119\\
 
 Dalam penelitian ini, kami membandingkan beberapa model untuk sistem deteksi trusi menggunakan \emph{Random Forest}, \emph{K-Neighbors}, \emph{Support Vector Machine}, dan \emph{Ensemble  Learning} dengan ketiga model diatas. Performa keempat pendekatan ini telah diamati berdasarkan \emph{accuracy}, \emph{precision}, \emph{recall}, dan \emph{f-measure} (\emph{F$_1$-score}).
 
-Dari hasil pengujian dari masing-masing algoritma yang ada pada tabel, menunjukkan kemampuan klasifikasi algoritma \emph{Ensemble  Learning} lebih tinggi tingkat akurasi dan ketepatan.  
+Dari hasil pengujian dari masing-masing algoritma yang ada pada tabel, menunjukkan kemampuan klasifikasi algoritma \emph{Ensemble  Learning} lebih tinggi tingkat akurasi dan ketepatan.
+
+Hasil penelitian ini sangat berguna untuk penelitian masa depan dengan cara memaksimalkan tingkat kinerja serta meminimalkan tingkat \emph{false negative}.
 
 \bibliographystyle{ieeetr}
 \bibliography{pustaka}
 
 \vspace{12pt}
-%\color{red}
 
 \end{document}
