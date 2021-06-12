@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex Tugas 6"] 1623497364 "Tugas 6.aux" "Tugas 6.bbl" "Tugas 6" 1623497365
+["bibtex Tugas 6"] 1623499968 "Tugas 6.aux" "Tugas 6.bbl" "Tugas 6" 1623499973
   "C:/Program Files/MiKTeX/bibtex/bst/bibtex/ieeetr.bst" 1291864344 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
-  "Tugas 6.aux" 1623497343 4700 0a825c4ee28ee7607ab0619bbb9bf761 "pdflatex"
-  "pustaka.bib" 1623497340 3016 33a7335a97ca44a3f88a8afacae1a10b ""
+  "Tugas 6.aux" 1623499972 4740 26d9057fda8b08f035eb2497c72d3101 "pdflatex"
+  "pustaka.bib" 1623497402 2439 4cfba2b82e202a30369d116f694491f2 ""
   (generated)
-  "Tugas 6.bbl"
   "Tugas 6.blg"
-["pdflatex"] 1623497199 "g:/tugasLanjutan/Tugas 6/Tugas 6.tex" "Tugas 6.pdf" "Tugas 6" 1623497365
+  "Tugas 6.bbl"
+["pdflatex"] 1623499969 "g:/A A KULIAH/Semester 6/Jaringan Komputer Lanjutan/tugasLanjutan/Tugas 6/Tugas 6.tex" "Tugas 6.pdf" "Tugas 6" 1623499973
   "C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Program Files/MiKTeX/fonts/tfm/adobe/times/ptmb7t.tfm" 1136747054 2172 fd0c924230362ff848a33632ed45dc23 ""
   "C:/Program Files/MiKTeX/fonts/tfm/adobe/times/ptmb8r.tfm" 1136747054 4524 6bce29db5bc272ba5f332261583fee9c ""
@@ -138,11 +138,11 @@
   "Gambar/Gbr010.jpg" 1623360873 83807 4749f9743524fc003aa6fc47b9d24caa ""
   "Gambar/Gbr011.jpg" 1623470853 121955 6cccf872ca03ed5ee8790ad73c71332f ""
   "Gambar/Metodologi_Diagram.png" 1623345959 8267 1d91e8d4ed054660ac4e20c1ac38b217 ""
-  "Tugas 6.aux" 1623497343 4700 0a825c4ee28ee7607ab0619bbb9bf761 "pdflatex"
-  "Tugas 6.bbl" 1623497365 1804 93324b5b70592ee7e1f519bf4174357b "bibtex Tugas 6"
-  "Tugas 6.tex" 1623497181 17561 c2fbca8503c2f0e6c6d0a2a18fd8673b ""
-  "g:/tugasLanjutan/Tugas 6/Tugas 6.tex" 1623497181 17561 c2fbca8503c2f0e6c6d0a2a18fd8673b ""
+  "Tugas 6.aux" 1623499972 4740 26d9057fda8b08f035eb2497c72d3101 "pdflatex"
+  "Tugas 6.bbl" 1623499969 1804 93324b5b70592ee7e1f519bf4174357b "bibtex Tugas 6"
+  "Tugas 6.tex" 1623499955 17575 cc2f11ba3ddf5d2de6517abb1b4124f9 ""
+  "g:/A A KULIAH/Semester 6/Jaringan Komputer Lanjutan/tugasLanjutan/Tugas 6/Tugas 6.tex" 1623499955 17575 cc2f11ba3ddf5d2de6517abb1b4124f9 ""
   (generated)
-  "Tugas 6.log"
   "Tugas 6.aux"
   "Tugas 6.pdf"
+  "Tugas 6.log"

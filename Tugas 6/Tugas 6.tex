@@ -118,10 +118,10 @@ d_{ij}=\sum^{k}_{i=1} | a_i-b_i |
 \item \emph{Minkwoski Distance}\\
 \emph{Minkwoski Distance} adalah metrik dalam ruang vektor bernorma yang dapat dianggap sebagai generalisasi dari kedua jarak \emph{Euclidean} dan jarak \emph{Manhattan}. Jarak \emph{Minkowski} antara dua variabel X dan Y didefinisikan sebagai:
 
-\begin{equation}
+\begin{equation*}
 d = (\sum^{n}_{i=1} | X_i-Y_i |^p)^{1/p}
 \label{eq3}
-\end{equation}
+\end{equation*}
 
 Kasus di mana $p$ = 1 setara dengan jarak \emph{Manhattan} dan kasus di mana $p$ = 2 setara dengan jarak \emph{Euclidean}.
 
@@ -141,18 +141,18 @@ Teori SVM berasal dari statistik dan prinsip dasar SVM adalah menemukan \emph{hy
 
 Dalam kaitannya dengan fungsi kernel, fungsi diskriminan mengambil bentuk berikut:
 
-\begin{equation}
+\begin{equation*}
 f(x) = \sum^{n}_i \alpha_ik(x,x_i)+b
 \label{eq4}
-\end{equation}
+\end{equation*}
 
 Dalam pekerjaan ini, kernel \emph{Gaussian} telah digunakan
 untuk membangun pengklasifikasi SVM.\\ \emph{Gaussian} kernel:
 
-\begin{equation}
+\begin{equation*}
 K(x_i,x_j) = exp\left (- \frac{||x_i-x_j||^2}{2\sigma} \right )
 \label{eq5}
-\end{equation}
+\end{equation*}
 
 \noindent dimana $\sigma$ adalah lebar fungsi.
 
@@ -304,25 +304,25 @@ pada ``Gambar. 13''.
 Dengan \emph{confusion matrix} dilakukan penghitungan \emph{Accuracy}, \emph{Precision}, \emph{Recall},
 dan \emph{F-measure} dari nilai masing-masing dalam matriks dengan menerapkan persamaan berikut:
 
-\begin{equation}
+\begin{equation*}
     Accuracy = \frac{TP + TN}{TP + FP + FN + TN}
     \label{eq6}
-\end{equation}
+\end{equation*}
 
-\begin{equation}
+\begin{equation*}
     Precision = \frac{TP}{TP + FP}
     \label{eq7}
-\end{equation}
+\end{equation*}
 
-\begin{equation}
+\begin{equation*}
     Recall = \frac{TP}{TP + FN}
     \label{eq8}
-\end{equation}
+\end{equation*}
 
-\begin{equation}
+\begin{equation*}
     F-measure = 2 * \frac{precision * recall}{precision + recall}
     \label{eq9}
-\end{equation}
+\end{equation*}
 
 \noindent dimana:
 
