@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.6.9)  12 JUN 2021 19:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.6.9)  10 JUL 2021 21:52
 entering extended mode
-**"g:/A A KULIAH/Semester 6/Jaringan Komputer Lanjutan/tugasLanjutan/Tugas 6/Tugas 6.tex"
-(g:/A A KULIAH/Semester 6/Jaringan Komputer Lanjutan/tugasLanjutan/Tugas 6/Tugas 6.tex
+**"k:/A A KULIAH/Semester 6/Jaringan Komputer Lanjutan/tugasLanjutan/Tugas 7/Tugas 6.tex"
+(k:/A A KULIAH/Semester 6/Jaringan Komputer Lanjutan/tugasLanjutan/Tugas 7/Tugas 6.tex
 LaTeX2e <2021-06-01>
 L3 programming layer <2021-06-01> (C:\Program Files\MiKTeX\tex/latex/ieeetran\IEEEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
@@ -420,24 +420,24 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-Underfull \hbox (badness 1515) in paragraph at lines 63--64
+Underfull \hbox (badness 1515) in paragraph at lines 68--69
 []\OT1/ptm/m/n/10 Hutan acak (\OT1/ptm/m/it/10 Ran-dom For-est\OT1/ptm/m/n/10 ) adalah kumpu-lan po-hon
  []
 
 <Gambar/Gbr001.jpg, id=4, 2494.31876pt x 1755.55875pt>
 File: Gambar/Gbr001.jpg Graphic file (type jpg)
 <use Gambar/Gbr001.jpg>
-Package pdftex.def Info: Gambar/Gbr001.jpg  used on input line 76.
+Package pdftex.def Info: Gambar/Gbr001.jpg  used on input line 81.
 (pdftex.def)             Requested size: 170.71652pt x 120.14253pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 79.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 84.
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 79.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 84.
  (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (10.0pt too wide) in paragraph at lines 75--80
+Overfull \hbox (10.0pt too wide) in paragraph at lines 80--85
 []$[]$ 
  []
 
@@ -445,211 +445,195 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 75--80
 
 
  <./Gambar/Gbr001.jpg>]
-Underfull \hbox (badness 2460) in paragraph at lines 130--131
+Underfull \hbox (badness 2460) in paragraph at lines 135--136
 []\OT1/ptm/m/n/10 Flowchart dari proses pe-mod-e-lan al-go-ritma \OT1/ptm/m/it/10 K-nearest
  []
 
 <Gambar/Gbr002.jpg, id=20, 292.6935pt x 319.9152pt>
 File: Gambar/Gbr002.jpg Graphic file (type jpg)
 <use Gambar/Gbr002.jpg>
-Package pdftex.def Info: Gambar/Gbr002.jpg  used on input line 133.
+Package pdftex.def Info: Gambar/Gbr002.jpg  used on input line 138.
 (pdftex.def)             Requested size: 156.49014pt x 171.0431pt.
 
-Overfull \hbox (10.0pt too wide) in paragraph at lines 132--137
+Overfull \hbox (10.0pt too wide) in paragraph at lines 137--142
 []$[]$ 
  []
 
 <Gambar/Gbr003.jpg, id=21, 341.1144pt x 402.5439pt>
 File: Gambar/Gbr003.jpg Graphic file (type jpg)
 <use Gambar/Gbr003.jpg>
-Package pdftex.def Info: Gambar/Gbr003.jpg  used on input line 164.
+Package pdftex.def Info: Gambar/Gbr003.jpg  used on input line 169.
 (pdftex.def)             Requested size: 142.26378pt x 167.8818pt.
 
-Overfull \hbox (10.0pt too wide) in paragraph at lines 163--168
+Overfull \hbox (10.0pt too wide) in paragraph at lines 168--173
 []$[]$ 
  []
 
 
-Underfull \hbox (badness 2521) in paragraph at lines 173--174
+Underfull \hbox (badness 2521) in paragraph at lines 178--179
 []\OT1/ptm/m/n/10 Flowchart dari proses pe-mod-e-lan al-go-ritma \OT1/ptm/m/it/10 En-sem-ble
  []
 
 <Gambar/Gbr004.png, id=22, 569.12625pt x 346.29375pt>
 File: Gambar/Gbr004.png Graphic file (type png)
 <use Gambar/Gbr004.png>
-Package pdftex.def Info: Gambar/Gbr004.png  used on input line 176.
+Package pdftex.def Info: Gambar/Gbr004.png  used on input line 181.
 (pdftex.def)             Requested size: 227.62204pt x 138.49919pt.
 
-Overfull \hbox (10.0pt too wide) in paragraph at lines 175--180
+Overfull \hbox (10.0pt too wide) in paragraph at lines 180--185
 []$[]$ 
  []
 
-<Gambar/Metodologi_Diagram.png, id=23, 181.67876pt x 344.28625pt>
+<Gambar/Metodologi_Diagram.png, id=23, 361.8318pt x 356.7729pt>
 File: Gambar/Metodologi_Diagram.png Graphic file (type png)
 <use Gambar/Metodologi_Diagram.png>
-Package pdftex.def Info: Gambar/Metodologi_Diagram.png  used on input line 186.
-(pdftex.def)             Requested size: 99.58464pt x 188.7171pt.
+Package pdftex.def Info: Gambar/Metodologi_Diagram.png  used on input line 194.
+(pdftex.def)             Requested size: 170.71652pt x 168.32565pt.
+[2 <./Gambar/Gbr002.jpg> <./Gambar/Gbr003.jpg> <./Gambar/Gbr004.png>]
+<Gambar/Gbr011.jpg, id=27, 308.5929pt x 181.1568pt>
+File: Gambar/Gbr011.jpg Graphic file (type jpg)
+<use Gambar/Gbr011.jpg>
+Package pdftex.def Info: Gambar/Gbr011.jpg  used on input line 236.
+(pdftex.def)             Requested size: 227.62204pt x 133.62822pt.
 
-Overfull \hbox (10.0pt too wide) in paragraph at lines 185--191
+Overfull \hbox (10.0pt too wide) in paragraph at lines 235--241
 []$[]$
  []
 
+
+Underfull \vbox (badness 3364) has occurred while \output is active []
+
+<Gambar/Gbr005.jpg, id=28, 289.08pt x 100.4553pt>
+File: Gambar/Gbr005.jpg Graphic file (type jpg)
+<use Gambar/Gbr005.jpg>
+Package pdftex.def Info: Gambar/Gbr005.jpg  used on input line 247.
+(pdftex.def)             Requested size: 170.71652pt x 59.32329pt.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 246--252
+[]$[]$
+ []
+
+<Gambar/Gbr006.jpg, id=29, 301.6068pt x 58.0569pt>
+File: Gambar/Gbr006.jpg Graphic file (type jpg)
+<use Gambar/Gbr006.jpg>
+Package pdftex.def Info: Gambar/Gbr006.jpg  used on input line 259.
+(pdftex.def)             Requested size: 256.0748pt x 49.29366pt.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 258--264
+[]$[]$
+ []
+
+<Gambar/Gbr007.jpg, id=30, 301.6068pt x 58.0569pt>
+File: Gambar/Gbr007.jpg Graphic file (type jpg)
+<use Gambar/Gbr007.jpg>
+Package pdftex.def Info: Gambar/Gbr007.jpg  used on input line 270.
+(pdftex.def)             Requested size: 256.0748pt x 49.29366pt.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 269--275
+[]$[]$
+ []
+
+<Gambar/Gbr008.jpg, id=31, 301.6068pt x 58.0569pt>
+File: Gambar/Gbr008.jpg Graphic file (type jpg)
+<use Gambar/Gbr008.jpg>
+Package pdftex.def Info: Gambar/Gbr008.jpg  used on input line 281.
+(pdftex.def)             Requested size: 256.0748pt x 49.29366pt.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 280--286
+[]$[]$
+ []
+
+<Gambar/Gbr009.jpg, id=32, 301.6068pt x 58.0569pt>
+File: Gambar/Gbr009.jpg Graphic file (type jpg)
+<use Gambar/Gbr009.jpg>
+Package pdftex.def Info: Gambar/Gbr009.jpg  used on input line 292.
+(pdftex.def)             Requested size: 256.0748pt x 49.29366pt.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 291--297
+[]$[]$
+ []
+
+[3 <./Gambar/Metodologi_Diagram.png (PNG copy)> <./Gambar/Gbr011.jpg> <./Gambar/Gbr005.jpg> <./Gambar/Gbr006.jpg> <./Gambar/Gbr007.jpg> <./Gambar/Gbr008.jpg> <./Gambar/Gbr009.jpg>]
+<Gambar/Gbr010.jpg, id=36, 301.6068pt x 58.0569pt>
+File: Gambar/Gbr010.jpg Graphic file (type jpg)
+<use Gambar/Gbr010.jpg>
+Package pdftex.def Info: Gambar/Gbr010.jpg  used on input line 303.
+(pdftex.def)             Requested size: 256.0748pt x 49.29366pt.
+
+Overfull \hbox (10.0pt too wide) in paragraph at lines 302--308
+[]$[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--366
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--366
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--388
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--388
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 391--410
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 391--410
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 413--432
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 413--432
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 435--454
+
+ []
+
+<Gambar/Gbr012.jpg, id=37, 433.62pt x 355.0866pt>
+File: Gambar/Gbr012.jpg Graphic file (type jpg)
+<use Gambar/Gbr012.jpg>
+Package pdftex.def Info: Gambar/Gbr012.jpg  used on input line 458.
+(pdftex.def)             Requested size: 221.93149pt x 181.73651pt.
+<Gambar/Gbr013.jpg, id=38, 433.62pt x 355.0866pt>
+File: Gambar/Gbr013.jpg Graphic file (type jpg)
+<use Gambar/Gbr013.jpg>
+Package pdftex.def Info: Gambar/Gbr013.jpg  used on input line 467.
+(pdftex.def)             Requested size: 221.93149pt x 181.73651pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2 <./Gambar/Gbr002.jpg> <./Gambar/Gbr003.jpg> <./Gambar/Gbr004.png>]
-<Gambar/Gbr01.jpg, id=28, 290.7663pt x 90.0966pt>
-File: Gambar/Gbr01.jpg Graphic file (type jpg)
-<use Gambar/Gbr01.jpg>
-Package pdftex.def Info: Gambar/Gbr01.jpg  used on input line 220.
-(pdftex.def)             Requested size: 227.62204pt x 70.53351pt.
-
-Overfull \hbox (10.0pt too wide) in paragraph at lines 219--225
-[]$[]$
- []
-
-<Gambar/Gbr011.jpg, id=29, 308.5929pt x 181.1568pt>
-File: Gambar/Gbr011.jpg Graphic file (type jpg)
-<use Gambar/Gbr011.jpg>
-Package pdftex.def Info: Gambar/Gbr011.jpg  used on input line 231.
-(pdftex.def)             Requested size: 227.62204pt x 133.62822pt.
-
-Overfull \hbox (10.0pt too wide) in paragraph at lines 230--236
-[]$[]$
- []
-
-<Gambar/Gbr005.jpg, id=30, 289.08pt x 100.4553pt>
-File: Gambar/Gbr005.jpg Graphic file (type jpg)
-<use Gambar/Gbr005.jpg>
-Package pdftex.def Info: Gambar/Gbr005.jpg  used on input line 242.
-(pdftex.def)             Requested size: 170.71652pt x 59.32329pt.
-
-Overfull \hbox (10.0pt too wide) in paragraph at lines 241--247
-[]$[]$
- []
-
-<Gambar/Gbr006.jpg, id=31, 301.6068pt x 58.0569pt>
-File: Gambar/Gbr006.jpg Graphic file (type jpg)
-<use Gambar/Gbr006.jpg>
-Package pdftex.def Info: Gambar/Gbr006.jpg  used on input line 254.
-(pdftex.def)             Requested size: 256.0748pt x 49.29366pt.
-
-Overfull \hbox (10.0pt too wide) in paragraph at lines 253--259
-[]$[]$
- []
-
-<Gambar/Gbr007.jpg, id=32, 301.6068pt x 58.0569pt>
-File: Gambar/Gbr007.jpg Graphic file (type jpg)
-<use Gambar/Gbr007.jpg>
-Package pdftex.def Info: Gambar/Gbr007.jpg  used on input line 265.
-(pdftex.def)             Requested size: 256.0748pt x 49.29366pt.
-
-Overfull \hbox (10.0pt too wide) in paragraph at lines 264--270
-[]$[]$
- []
-
-<Gambar/Gbr008.jpg, id=33, 301.6068pt x 58.0569pt>
-File: Gambar/Gbr008.jpg Graphic file (type jpg)
-<use Gambar/Gbr008.jpg>
-Package pdftex.def Info: Gambar/Gbr008.jpg  used on input line 276.
-(pdftex.def)             Requested size: 256.0748pt x 49.29366pt.
-
-Overfull \hbox (10.0pt too wide) in paragraph at lines 275--281
-[]$[]$
- []
-
-<Gambar/Gbr009.jpg, id=34, 301.6068pt x 58.0569pt>
-File: Gambar/Gbr009.jpg Graphic file (type jpg)
-<use Gambar/Gbr009.jpg>
-Package pdftex.def Info: Gambar/Gbr009.jpg  used on input line 287.
-(pdftex.def)             Requested size: 256.0748pt x 49.29366pt.
-
-Overfull \hbox (10.0pt too wide) in paragraph at lines 286--292
-[]$[]$
- []
-
-[3 <./Gambar/Metodologi_Diagram.png> <./Gambar/Gbr01.jpg> <./Gambar/Gbr011.jpg> <./Gambar/Gbr005.jpg> <./Gambar/Gbr006.jpg> <./Gambar/Gbr007.jpg> <./Gambar/Gbr008.jpg>]
-<Gambar/Gbr010.jpg, id=39, 301.6068pt x 58.0569pt>
-File: Gambar/Gbr010.jpg Graphic file (type jpg)
-<use Gambar/Gbr010.jpg>
-Package pdftex.def Info: Gambar/Gbr010.jpg  used on input line 298.
-(pdftex.def)             Requested size: 256.0748pt x 49.29366pt.
-
-Overfull \hbox (10.0pt too wide) in paragraph at lines 297--303
-[]$[]$
- []
-
-
-Overfull \hbox (10.0pt too wide) in paragraph at lines 342--361
-[]$[]$ 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 342--361
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 342--361
-
- []
-
-
-Overfull \hbox (10.0pt too wide) in paragraph at lines 364--383
-[]$[]$ 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--383
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--383
-
- []
-
-
-Overfull \hbox (10.0pt too wide) in paragraph at lines 386--405
-[]$[]$ 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 386--405
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 386--405
-
- []
-
-
-Overfull \hbox (10.0pt too wide) in paragraph at lines 408--427
-[]$[]$ 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 408--427
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 408--427
-
- []
-
-
-Overfull \hbox (10.0pt too wide) in paragraph at lines 430--449
-[]$[]$ 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 430--449
-
- []
-
-(Tugas 6.bbl [4 <./Gambar/Gbr009.jpg> <./Gambar/Gbr010.jpg>])
+ [4 <./Gambar/Gbr010.jpg> <./Gambar/Gbr012.jpg>]
+<Gambar/Gbr014.jpg, id=42, 433.62pt x 346.896pt>
+File: Gambar/Gbr014.jpg Graphic file (type jpg)
+<use Gambar/Gbr014.jpg>
+Package pdftex.def Info: Gambar/Gbr014.jpg  used on input line 476.
+(pdftex.def)             Requested size: 221.93149pt x 177.5445pt.
+<Gambar/Gbr015.jpg, id=43, 433.62pt x 346.896pt>
+File: Gambar/Gbr015.jpg Graphic file (type jpg)
+<use Gambar/Gbr015.jpg>
+Package pdftex.def Info: Gambar/Gbr015.jpg  used on input line 485.
+(pdftex.def)             Requested size: 221.93149pt x 177.5445pt.
+ (Tugas 6.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -661,21 +645,23 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5
+[5 <./Gambar/Gbr013.jpg> <./Gambar/Gbr014.jpg> <./Gambar/Gbr015.jpg>] (Tugas 6.aux)
 
-] (Tugas 6.aux) ) 
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 12705 strings out of 478864
- 240190 string characters out of 2858518
- 546189 words of memory out of 3000000
- 30408 multiletter control sequences out of 15000+600000
+ 12729 strings out of 478864
+ 240636 string characters out of 2858518
+ 545216 words of memory out of 3000000
+ 30429 multiletter control sequences out of 15000+600000
  436739 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,9n,69p,591b,280s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,9n,69p,591b,278s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "Tugas 6.pdf" (5 pages, 1984053 bytes).
+Output written on "Tugas 6.pdf" (5 pages, 3476084 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
+ 93 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 93 words of extra memory for PDF output out of 10000 (max. 10000000)
 

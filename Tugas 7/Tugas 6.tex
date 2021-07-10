@@ -52,9 +52,14 @@ intrusion detection, Random Forest, K-Neighbors, SVM, Ensemble Learning, NSL-KDD
 \section{Pendahuluan}
 Pengguna internet yang terus meningkat dari tahun ke tahun tidak terlepas dari serangan yang timbul dari teknologi jaringan seperti serangan \emph{malware infection}. Oleh karena itu, diperlukan keamanan dalam sistem komputer untuk mencegah dari serangan.
 
-IDS (\emph{Intrusion Detection System}) merupakan sebuah aplikasi yang mampu mencatat kegiatan dalam suatu jaringan dan menganalisa paket-paket yang dikirim melalui lalu lintas jaringan secara \emph{realtime}. Tujuan dari sistem ini yaitu mengawasi jika terjadi penetrasi ke dalam sistem, mengawasi \emph{traffic} yang terjadi pada jaringan, mendeteksi \emph{anomaly} terjadinya penyimpangan dari sistem yang normal atau tingkah laku user.
+IDS pertama kali diperkenalkan oleh James Anderson et al. 
+Sistem deteksi intrusi diklasifikasikan menjadi dua jenis yaitu berbasis host dan berbasis jaringan. Sistem deteksi intrusi 
+berbasis host memeriksa data yang dimiliki sistem komputer individu, sedangkan sistem berbasis jaringan 
+menganalisis data yang dipertukarkan antar komputer\cite{farnaaz2016random}.
 
-Dalam melakukan deteksi serangan, dapat digunakan beberapa algoritma  yaitu Random Forest, K-Neighbors, SVM dan Ensemble Learning. Dan tujuan dari penelitian ini adalah untuk membandingkan performa dari masing-masing algoritma.
+Sistem deteksi kesalahan penggunaan menemukan tanda serangan yang dikenal dalam sumber daya yang dipantau. Sistem deteksi anomali menemukan serangan dengan mendeteksi perubahan pola pemanfaatan atau perilaku sistem\cite{hasan}.
+
+Dalam melakukan deteksi serangan, dapat digunakan beberapa algoritma  yaitu Random Forest, K-Neighbors\cite{nurhadi2017aplikasi}, SVM dan Ensemble Learning\cite{zhang}. Dan tujuan dari penelitian ini adalah untuk membandingkan performa dari masing-masing algoritma.
 
 \section{Penjelasan Teori}
 
@@ -180,124 +185,124 @@ Flowchart dari proses pemodelan algoritma \emph{Ensemble Learning} dapat dilihat
 
 \section{Metodologi}
 
-Metodologi adalah tahapan yang akan dilakukan dalam melakukan penelitian agar dapat memenuhi tujuan sesuai dengan yang diharapkan. Tahapan penelitian yang akan dilakukan dapat dilihat pada ``Gambar. 5''.
+Metodologi adalah tahapan yang akan dilakukan dalam penelitian agar dapat memenuhi tujuan sesuai dengan yang diharapkan.
 
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=35mm]{Gambar/Metodologi_Diagram.png}}
-\captionof{figure}{Tahapan Penelitian}
+Sistem deteksi intrusi jaringan dapat menganalisis paket yang ditangkap jaringan dan mendeteksi apakah itu akan menjadi penyusupan atau tidak.
+Dilihat dari arsitekturnya, diagram sistem mencakup beberapa modul, yang ditunjukkan pada ``Gambar. 5''.
+
+\noindent \begin{minipage}{\linewidth}
+\centerline{\includegraphics[width=60mm]{Gambar/Metodologi_Diagram.png}}
+\captionof{figure}{Blok Diagram Modul Pada Sistem}
 \label{fig5}
 \end{minipage}
 \vspace{6pt}
 
-Tahapan pada penelitian ini dapat dijelaskan sebagai berikut:
+Berdasarkan gambar di atas, terdapat beberapa modul yang memperkenalkan sistem deteksi intrusi jaringan seperti:
 
-\noindent \textbf{Pengumpulan Data}
+\noindent \textbf{Dataset}
 
-Pengumpulan data yang dilakukan dengan membaca dan mempelajari penelitian sebelumnya yang berhubungan dengan IDS.
+Untuk melakukan pelatihan/pengujian digunakan dataset NSL-KDD dimana NSLKDDTrain sebagai data latih dan NSLKDDTest sebagai data uji.
 
-\noindent \textbf{Analisa}
+\noindent \textbf{Packet}
 
-Pada tahap ini adalah menganalisa data yaitu data latih yang digunakan untuk standarisasi melakukan pengujian, dan data uji yang digunakan untuk mengetes penilaian yang dihasilkan
-dari data latih.
+Paket untuk dijadikan sumber data NIDS yang diambil dari dataset.
 
-Tahap ini juga menganalisa metode yang digunakan dalam penelitian yang berkaitan dengan sistem yang digunakan.
+\noindent \textbf{Preprocessor}
 
-\noindent \textbf{Implementasi dan Pengujian}
+Pada fase preprocessing, lalu lintas jaringan dikumpulkan dan diproses untuk digunakan sebagai input ke sistem.
 
-Proses implementasi adalah merealisasikan aplikasi IDS sesuai dengan dengan bahasa pemrograman yang digunakan yaitu Phyton menggunakan JupyterLab.
+\noindent \textbf{Feature Extractor}
 
-Tahap pengujian adalah tahap yang dilakukan untuk menguji masing-masing metode yang digunakan dalam penelitian dengan tujuan untuk mengetahui perbandingan performa dari setiap algoritma.
+Modul ini mengekstrak vektor fitur dari paket jaringan (catatan koneksi) dan mengirimkan vektor fitur ke modul pengklasifikasi.
 
-\noindent \textbf{Kesimpulan}
+\noindent \textbf{Classifier}
 
-Merupakan tahap penentuan kesimpulan terhadap hasil pengujian yang telah dilakukan.
+Fungsi modul ini adalah untuk menganalisis aliran jaringan dan menarik kesimpulan apakah terjadi intrusi atau tidak.
+
+\noindent \textbf{Decision}
+
+Modul ini akan mendeteksi intrusi yang terjadi.
+
+\noindent \textbf{Knowledgebase}
+
+Modul ini berfungsi untuk sampel pelatihan fase classifier. Sistem dapat bekerja secara efektif hanya jika telah dilatih dengan benar dan memadai. Sampel intrusi dapat disempurnakan di bawah partisipasi pengguna, sehingga kemampuan deteksi dapat terus ditingkatkan.
 
 \section{Hasil dan Pembahasan}
 
-Untuk melakukan pelatihan/pengujian digunakan dataset NSL-KDD dimana NSL\_KDD\_Train sebagai data latih dan NSL\_KDD\_Test sebagai data uji seperti pada ``Gambar. 6''\cite{mamcose}.\vspace{6pt}
-
-\begin{minipage}{\linewidth}
-\centerline{\includegraphics[width=80mm]{Gambar/Gbr01.jpg}}
-\captionof{figure}{Data Latih dan Data Uji}
-\label{fig6}
-\end{minipage}
-\vspace{6pt}
-
-Dari dataset tersebut dibagi untuk setiap kategori serangan
-yaitu 0 = Normal, 1 = DoS, 2 = Probe, 3 = R2L, 4 = U2R.
-Hasil pembagian setiap kategori serangan dari data latih dan data uji dapat dilihat pada ``Gambar. 7''.\vspace{6pt}
+Dari dataset yang digunakan, terbagi beberapa kategori serangan yaitu 0 = Normal, 1 = DoS, 2 = Probe, 3 = R2L, 4 = U2R.
+Hasil pembagian setiap kategori serangan dari data latih dan data uji dapat dilihat pada ``Gambar. 6''.\vspace{6pt}
 
 \begin{minipage}{\linewidth}
     \centerline{\includegraphics[width=80mm]{Gambar/Gbr011.jpg}}
     \captionof{figure}{Jumlah Data Setiap Kategori Serangan}
-    \label{fig7}
+    \label{fig6}
     \end{minipage}
     \vspace{6pt}
 
 Untuk menghitung precision dan recall dengan cepat dari setiap serangan dilakukan
 tahap \emph{Prediction} dan \emph{Evaluation} (\emph{validation}) dengan \emph{confusion matrix}
-seperti pada ``Gambar. 8''.
+seperti pada ``Gambar. 7''.
 
 \begin{minipage}{\linewidth}
 \centerline{\includegraphics[width=60mm]{Gambar/Gbr005.jpg}}
 \captionof{figure}{Confusion Matrix}
-\label{fig8}
+\label{fig7}
 \end{minipage}
 \vspace{6pt}
 
 
 Hasil \emph{Prediction} dan \emph{Evaluation} (\emph{validation})
 metode \emph{Random Forest} semua fitur dapat dilihat
-pada ``Gambar. 9''.
+pada ``Gambar. 8''.
 
 \begin{minipage}{\linewidth}
 \centerline{\includegraphics[width=90mm]{Gambar/Gbr006.jpg}}
 \captionof{figure}{Confusion Matrix Random Forest All Fitur}
-\label{fig9}
+\label{fig8}
 \end{minipage}
 \vspace{6pt}
 
 Hasil \emph{Prediction} dan \emph{Evaluation} (\emph{validation})
 metode \emph{Random Forest} 13 fitur dapat dilihat
-pada ``Gambar. 10''.
+pada ``Gambar. 9''.
 
 \begin{minipage}{\linewidth}
 \centerline{\includegraphics[width=90mm]{Gambar/Gbr007.jpg}}
 \captionof{figure}{Confusion Matrix Random Forest 13 Fitur}
-\label{fig10}
+\label{fig9}
 \end{minipage}
 \vspace{6pt}
 
 Hasil \emph{Prediction} dan \emph{Evaluation} (\emph{validation})
 metode \emph{K-Neighbors} dapat dilihat
-pada ``Gambar. 11''.
+pada ``Gambar. 10''.
 
 \begin{minipage}{\linewidth}
 \centerline{\includegraphics[width=90mm]{Gambar/Gbr008.jpg}}
 \captionof{figure}{Confusion Matrix K-Neighbors}
-\label{fig11}
+\label{fig10}
 \end{minipage}
 \vspace{6pt}
 
 Hasil \emph{Prediction} dan \emph{Evaluation} (\emph{validation})
 metode SVM dapat dilihat
-pada ``Gambar. 12''.
+pada ``Gambar. 11''.
 
 \begin{minipage}{\linewidth}
 \centerline{\includegraphics[width=90mm]{Gambar/Gbr009.jpg}}
 \captionof{figure}{Confusion Matrix SVM}
-\label{fig12}
+\label{fig11}
 \end{minipage}
 \vspace{6pt}
 
 Hasil \emph{Prediction} dan \emph{Evaluation} (\emph{validation})
 metode \emph{Ensemble Learning} dapat dilihat
-pada ``Gambar. 13''.
+pada ``Gambar. 12''.
 
 \begin{minipage}{\linewidth}
 \centerline{\includegraphics[width=90mm]{Gambar/Gbr010.jpg}}
 \captionof{figure}{Confusion Matrix Ensemble Learning}
-\label{fig13}
+\label{fig12}
 \end{minipage}
 \vspace{6pt}
 
@@ -335,11 +340,11 @@ dan \emph{F-measure} dari nilai masing-masing dalam matriks dengan menerapkan pe
 \noindent $FN$ = False Negative
 \vspace{6pt}
 
-Dari hasil evaluasi kinerja dari masing-masing model atau algoritma, dapat dilihat pada tabel-tabel berikut:
+Hasil evaluasi kinerja dari masing-masing model atau algoritma, dapat dilihat pada tabel-tabel berikut:
 
 \noindent Pengujian menggunakan algoritma \emph{Random Forest} untuk semua fitur dapat dilihat pada ``Tabel. I''.\vspace{6pt}
 
-\begin{minipage}{\linewidth}
+\noindent \begin{minipage}{\linewidth}
 \captionof{table}{Algoritma Random Forest untuk semua Fitur}
 \begin{center}
 \begin{tabular}{|l|l|l|l|l|}
@@ -361,7 +366,7 @@ U2R & 0.98047 & 0.97293 & 0.96844 & 0.97290\\
 
 \noindent Pengujian menggunakan algoritma \emph{Random Forest} untuk 13 fitur dapat dilihat pada ``Tabel. II''.\vspace{6pt}
 
-\begin{minipage}{\linewidth}
+\noindent \begin{minipage}{\linewidth}
 \captionof{table}{Algoritma Random Forest untuk 13 Fitur}
 \begin{center}
 \begin{tabular}{|l|l|l|l|l|}
@@ -383,7 +388,7 @@ U2R & 0.99693 & 0.96256 & 0.83183 & 0.90644\\
 
 \noindent Pengujian menggunakan algoritma \emph{K-Neighbors} dapat dilihat pada ``Tabel. III''.\vspace{6pt}
 
-\begin{minipage}{\linewidth}
+\noindent \begin{minipage}{\linewidth}
 \captionof{table}{Algoritma K-Neighbors}
 \begin{center}
 \begin{tabular}{|l|l|l|l|l|}
@@ -405,7 +410,7 @@ U2R & 0.99703 & 0.93143 & 0.85073 & 0.87831\\
 
 \noindent Pengujian menggunakan algoritma SVM dapat dilihat pada ``Tabel. IV''.
 
-\begin{minipage}{\linewidth}
+\noindent \begin{minipage}{\linewidth}
 \captionof{table}{Algoritma SVM}
 \begin{center}
 \begin{tabular}{|l|l|l|l|l|}
@@ -427,7 +432,7 @@ U2R & 0.99632 & 0.91056 & 0.82909 & 0.84869\\
 
 \noindent Pengujian menggunakan algoritma \emph{Ensemble Learning} dapat dilihat pada ``Tabel. V''.\vspace{6pt}
 
-\begin{minipage}{\linewidth}
+\noindent \begin{minipage}{\linewidth}
 \captionof{table}{Algoritma Ensemble Learning}
 \begin{center}
 \begin{tabular}{|l|l|l|l|l|}
@@ -447,13 +452,54 @@ U2R & 0.99744 & 0.94270 & 0.88758 & 0.91119\\
 \end{center}
 \end{minipage}\\
 
+\noindent Tingkat akurasi dari masing-masing serangan disajikan dalam bentuk diagram garis seperti pada ``Gambar. 13''.
+
+\noindent \begin{minipage}{\linewidth}
+\centerline{\includegraphics[width=78mm]{Gambar/Gbr012.jpg}}
+\captionof{figure}{Tingkat Akurasi masing-masing Serangan}
+\label{fig13}
+\end{minipage}
+\vspace{6pt}
+
+\noindent Tingkat presisi dari masing-masing serangan disajikan dalam bentuk diagram garis seperti pada ``Gambar. 14''.\vspace{6pt}
+
+\noindent \begin{minipage}{\linewidth}
+\centerline{\includegraphics[width=78mm]{Gambar/Gbr013.jpg}}
+\captionof{figure}{Tingkat Presisi masing-masing Serangan}
+\label{fig14}
+\end{minipage}
+\vspace{6pt}
+
+\noindent Tingkat sensitifitas dari masing-masing serangan disajikan dalam bentuk diagram garis seperti pada ``Gambar. 15''.\vspace{6pt}
+
+\noindent \begin{minipage}{\linewidth}
+\centerline{\includegraphics[width=78mm]{Gambar/Gbr014.jpg}}
+\captionof{figure}{Tingkat Recall masing-masing Serangan}
+\label{fig15}
+\end{minipage}
+\vspace{6pt}
+
+\noindent Perbandingan rata-rata antara presisi dan sensitifitas dari masing-masing serangan disajikan dalam bentuk diagram garis seperti pada ``Gambar. 16''.\vspace{6pt}
+
+\noindent \begin{minipage}{\linewidth}
+\centerline{\includegraphics[width=78mm]{Gambar/Gbr015.jpg}}
+\captionof{figure}{F-measure masing-masing Serangan}
+\label{fig16}
+\end{minipage}
+\vspace{6pt}
+
 \section{Kesimpulan}
 
-Dalam penelitian ini, kami membandingkan beberapa model untuk sistem deteksi trusi menggunakan \emph{Random Forest}, \emph{K-Neighbors}, \emph{Support Vector Machine}, dan \emph{Ensemble  Learning} dengan ketiga model diatas. Performa keempat pendekatan ini telah diamati berdasarkan \emph{accuracy}, \emph{precision}, \emph{recall}, dan \emph{f-measure} (\emph{F$_1$-score}).
+Dalam penelitian ini, kami membandingkan beberapa model untuk sistem deteksi intrusi menggunakan \emph{Random Forest}, \emph{K-Neighbors}, \emph{Support Vector Machine}, dan \emph{Ensemble  Learning} dengan ketiga model diatas. Performa keempat pendekatan ini telah diamati berdasarkan \emph{accuracy}, \emph{precision}, \emph{recall}, dan \emph{f-measure} (\emph{F$_1$-score}).
 
-Dari hasil pengujian dari masing-masing algoritma yang ada pada tabel, menunjukkan kemampuan klasifikasi algoritma \emph{Ensemble  Learning} lebih tinggi tingkat akurasi dan ketepatan.
+Dari hasil pengujian, tingkat performa dari masing-masing algoritma dipengaruhi oleh banyaknya data sampel serta berdasarkan nilai prediksi dan nilai aktual pada \emph{Confusion Matrix} hasil klasifikasi yang dilakukan oleh sistem (model).
 
-Hasil penelitian ini sangat berguna untuk penelitian masa depan dengan cara memaksimalkan tingkat kinerja serta meminimalkan tingkat \emph{false negative}.
+Dalam melakukan perbandingan performa, penelitian ini lebih memilih diprediksi diserang ternyata tidak diserang (FP) daripada diprediksi tidak diserang ternyata diserang (FN).
+Kemampuan klasifikasi algoritma \emph{Ensemble Learning} menghasilkan nilai \emph{False Negative} lebih sedikit dibandingkan algoritma lainnya,
+sehingga algoritma ini dinilai lebih tinggi tingkat akurasi dan ketepatan.
+ 
+
+Hasil penelitian ini sangat berguna untuk penelitian masa depan dengan cara memaksimalkan tingkat kinerja serta meminimalkan nilai \emph{False Negative}.
 
 \bibliographystyle{ieeetr}
 \bibliography{pustaka}
